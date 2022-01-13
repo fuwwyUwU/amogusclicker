@@ -6,6 +6,6 @@ amogus.onclick = function () {
   drippnes++;
   text.innerHTML =
     drippnes <= 69
-      ? `YoU hAVe ${drippnes} <br> SUS`
+      ? `YoU hAVe ${drippnes} drip<br> SUS`
       : `you have 69 + ${drippnes - 69} dripness <br> sus king`;
 };
