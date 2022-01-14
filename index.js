@@ -27,8 +27,7 @@ function getCookie(name) {
 }
 
 function SetUp() {
-  document.cookie = "dripness=1000; expires=Sun, 01 Jan 2100 12:00:00 UTC";
-  dripness = getCookie("dripness");
+  dripness = parseInt(getCookie("dripness"));
   text.innerHTML = getScore();
 }
 
