@@ -1,6 +1,7 @@
 var text = document.querySelector("p");
 var amogus = document.querySelector("img");
 var dripness = 0;
+var hasImpSprite = false;
 SetUp();
 
 function getCookie(name) {
@@ -28,17 +29,32 @@ function getCookie(name) {
 
 function SetUp() {
   dripness = parseInt(getCookie("dripness"));
+  if (!dripness) {
+    dripness = 0;
+  }
   text.innerHTML = getScore();
 }
 
 function getScore() {
-  return dripness == 0
+  console.log();
+  if (dripness >= 69909 && !hasImpSprite) {
+    amogus.src = "sus.png";
+  }
+  return dripness <= 0
     ? "YoU hAVe 0 DrIPneSs PeAsent"
     : dripness <= 69
     ? `YoU hAVe ${dripness} <br> SUS`
     : dripness <= 489
     ? `you have 69 + ${dripness - 69} dripness <br> sus king`
-    : `you have 69 + 420 + ${dripness - 489} <br> sus master`;
+    : dripness < 1000
+    ? `you have 69 + 420 + ${dripness - 489} drippy stuff<br> sus master`
+    : dripness <= 69909
+    ? `you have 69 + 420 + ${
+        dripness - 489
+      } <br> amogus sussy drip <br>Sussy baka`
+    : `YOUR DRIP IS GODLY, 69420 + ${
+        dripness - 69420
+      } DRIPPINESS <br> Sussy impostor`;
 }
 
 amogus.onclick = function () {
