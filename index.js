@@ -28,7 +28,6 @@ function getCookie(name) {
 
 function SetUp() {
   document.cookie = "dripness=1000; expires=Sun, 01 Jan 2100 12:00:00 UTC";
-  console.log(getCookie("dripness"));
   dripness = getCookie("dripness");
   text.innerHTML = getScore();
 }
@@ -47,3 +46,7 @@ amogus.onclick = function () {
   dripness++;
   text.innerHTML = getScore();
 };
+
+setInterval(() => {
+  document.cookie = `dripness=${dripness}; expires=Sun, 01 Jan 2100 12:00:00 UTC;`;
+});
