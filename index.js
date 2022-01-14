@@ -48,4 +48,4 @@ amogus.onclick = function () {
 
 setInterval(() => {
   document.cookie = `dripness=${dripness}; expires=Sun, 01 Jan 2100 12:00:00 UTC;`;
-});
+}, 60 * 1000);
